@@ -1,3 +1,30 @@
-<html>
-<input type="file" accept="image/*" />
-</html>
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>Title</title><script>
+                function getToastMessage() {
+                    return document.getElementById('toastMessage').value;
+                }
+                function concatenateStrings(arg1, arg2) {
+                    return arg1 + arg2;
+                }
+                function showToast() {
+                    MyJavascriptInterface.showToast(getToastMessage());
+                }
+                
+                function handleMessage(message) {
+                    document.getElementById('handleMessageData').innerHTML = message
+                }
+            </script>,
+        </head>
+        <body>
+        <div style="max-width:960px; margin: auto; text-align:center;">
+            <div style="margin-top: 50px;">
+              <p id="handleMessageData"></p>
+            </div>
+            <div style="margin-top: 50px;">
+                <input id="toastMessage" type="text" placeholder="Toast message"/>
+            </div>
+            <div style="margin-top: 50px;">
+                <button id="showToast" type="button" onclick="showToast()">Show toast</button>
+            </div>
+        </div>
+        </body>
+        </html>
